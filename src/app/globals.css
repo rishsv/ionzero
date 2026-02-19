@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+/* ============================================
+   THEME VARIABLES & RESPONSIVE SCALING
+   ============================================ */
+:root {
+  --background: #FAFAFA;
+  --foreground: #000000;
+  --accent: #F4F4F4;
+  --muted: #666666;
+  --border: #F0F0F0;
+  --hairline: 0.5px;
+
+  --background-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0;
+}
+
+.dark {
+  --background: #050505;
+  --foreground: #FFFFFF;
+  --accent: #0F0F0F;
+  --muted: #888888;
+  --border: #1A1A1A;
+
+  --background-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --font-heading: var(--font-heading), "Inter", sans-serif;
+  --font-body: var(--font-body), "Inter", sans-serif;
+  --font-mono: var(--font-geist-mono);
+
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0.01em;
+  --tracking-wide: 0.1em;
+  --tracking-widest: 0.25em;
+  --tracking-scientific: 0.4em;
+}
+
+.font-ion {
+  font-family: var(--font-ion), "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.font-zero {
+  font-family: var(--font-zero), "League Spartan", sans-serif;
+  font-weight: 800;
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+.text-scientific {
+  letter-spacing: var(--tracking-scientific);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   PREMIUM UTILITIES
+   ============================================ */
+.glass {
+  background: rgba(var(--background-rgb), 0.7);
+  backdrop-filter: blur(40px);
+  border: var(--hairline) solid rgba(var(--foreground-rgb), 0.1);
+}
+
+::selection {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+/* ============================================
+   RESPONSIVE IMPROVEMENTS
+   ============================================ */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
