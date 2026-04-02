@@ -40,8 +40,31 @@ const leagueSpartan = League_Spartan({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ionzero.in"),
   title: "IonZERO by MKT Aqua | Ultra-Pure Grade DI/DM Water",
   description: "The Ultimate Standard for Critical Precision. Ultra-pure deionized and demineralized water by MKT Aqua for pharmaceutical, analytical, and industrial excellence.",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    title: "IonZERO by MKT Aqua | Ultra-Pure Grade DI/DM Water",
+    description: "The Ultimate Standard for Critical Precision. Ultra-pure deionized and demineralized water by MKT Aqua for pharmaceutical, analytical, and industrial excellence.",
+    url: "https://ionzero.in",
+    siteName: "IonZERO",
+    locale: "en_IN",
+    type: "website",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

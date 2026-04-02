@@ -7,6 +7,11 @@ import FAQ from "@/components/sections/FAQ";
 export default function Home() {
   return (
     <>
+      <header className="sr-only">
+        <h1>IonZero - AI &amp; Tech Platform in India</h1>
+        <p>IonZero is a platform for AI, development, and innovation.</p>
+      </header>
+
       <Hero />
       <Process />
       <Industries />
